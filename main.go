@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"practice/controllers"
+	"practice/database"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -44,7 +45,7 @@ func main() {
 		fmt.Println("DB Connection Success")
 	}
 
-	// database.dBMigrate(DB)
+	database.DbMigrate(DB)
 	defer DB.Close()
 
 	//router GIN

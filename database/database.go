@@ -12,7 +12,7 @@ var (
 	DbConnection *sql.DB
 )
 
-func dBMigrate(dbParam *sql.DB) {
+func DbMigrate(dbParam *sql.DB) {
 	migrations := &migrate.PackrMigrationSource{
 		Box: packr.New("migrations", "./sql_migrations"),
 	}
