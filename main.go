@@ -55,5 +55,5 @@ func main() {
 	router.PUT("/person/:id", controllers.UpdatePerson)
 	router.DELETE("/person/:id", controllers.DeletePerson)
 
-	router.Run("localhost:8080")
+	router.Run()
 }
